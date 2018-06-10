@@ -1,0 +1,7 @@
+package com.ylkj.ems.base;
+
+import android.support.v7.app.AppCompatActivity;
+
+public class BaseActivity extends AppCompatActivity {
+
+}
