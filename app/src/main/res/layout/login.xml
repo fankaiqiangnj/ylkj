@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/loginbg" >
+
+    
+    <LinearLayout
+        android:paddingTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+    <LinearLayout
+        android:id="@+id/loginlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/loginmainbg"
+        android:orientation="vertical"
+        android:padding="@dimen/loginmainpading" >
+        <EditText
+            android:id="@+id/loginname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:background="@mipmap/logineditbg"
+            android:drawableLeft="@mipmap/loginnamelogo" />
+
+        <EditText
+            android:id="@+id/loginkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/logineditbg"
+            android:password="true"
+            android:singleLine="true"
+            android:drawableLeft="@mipmap/loginkeylogo" />
+        
+        <CheckBox 
+            android:id="@+id/remenber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remenber"
+            android:textSize="@dimen/textsize2"
+            android:checked="true"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/loginsubmit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padleft"
+            android:paddingRight="@dimen/padleft"
+            android:background="@drawable/buttonselector"
+            android:textColor="@color/green"
+            android:text="@string/login_submit" />
+
+        <Button
+            android:id="@+id/replace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padleft"
+            android:paddingRight="@dimen/padleft"
+            android:background="@drawable/buttonselector"
+            android:textColor="@color/green"
+            android:text="@string/replace" />
+    </LinearLayout>
+    </LinearLayout>
+	<ImageButton
+            android:id="@+id/btn_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/btn_set"
+             />
+</RelativeLayout>

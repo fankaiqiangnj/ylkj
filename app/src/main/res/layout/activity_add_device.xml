@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/toplinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/logolayout" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shapee"
+                android:gravity="center"
+                android:text="@string/deviceinformation"
+                android:textSize="@dimen/textsize2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_frame"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/baserepairtask"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="@dimen/textsize2" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/error_type"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/error_type"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="@dimen/textsize2" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/equipment_name"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/equipment_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/equipment_state"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/equipment_state"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/voltage_rank"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/voltage_rank"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/measurement_unit"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/measurement_unit"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/model"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/model"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/storekeeper"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/storekeeper"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:editable="false"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 2 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/baserepairtask"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="@dimen/textsize2" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/equipment_number"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/equipment_number"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/equipment_class"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/equipment_class"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tool_cost_center1"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/tool_cost_center"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/count"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/count"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/work_center"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/work_center"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rejectdepartment1"
+                                android:textSize="@dimen/textsize2" />
+
+                            <EditText
+                                android:id="@+id/rejectdepartment"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:editable="false"
+                                android:textSize="@dimen/textsize2" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/baserepairtask"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/project_name"
+                        android:textSize="@dimen/textsize2" />
+
+                    <EditText
+                        android:id="@+id/project_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize2" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/baserepairtask"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saveaddress"
+                        android:textSize="@dimen/textsize2" />
+
+                    <EditText
+                        android:id="@+id/saveaddress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize2" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/baserepairtask"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remarks"
+                        android:textSize="@dimen/textsize2" />
+
+                    <EditText
+                        android:id="@+id/remarks"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize2" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@drawable/corners_frame"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnRfidScan"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toolbuttonbg"
+                    android:layout_marginLeft="@dimen/margin_left_right"
+                    android:layout_marginRight="@dimen/margin_left_right"
+                    android:text="@string/rfid_scan"
+                    android:textSize="@dimen/textsize1" />
+                <Button
+                    android:id="@+id/btnBarScan"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toolbuttonbg"
+                    android:layout_marginLeft="@dimen/margin_left_right"
+                    android:layout_marginRight="@dimen/margin_left_right"
+                    android:text="@string/barcode"
+                    android:textSize="@dimen/textsize1" />
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toolbuttonbg"
+                    android:layout_marginLeft="@dimen/margin_left_right"
+                    android:layout_marginRight="@dimen/margin_left_right"
+                    android:text="@string/save"
+                    android:textSize="@dimen/textsize1" />
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toolbuttonbg"
+                    android:layout_marginLeft="@dimen/margin_left_right"
+                    android:layout_marginRight="@dimen/margin_left_right"
+                    android:text="@string/replace2"
+                    android:textSize="@dimen/textsize1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

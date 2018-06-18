@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shapee"
+        android:gravity="center"
+        android:text="@string/floagcomfirm"
+        android:textSize="@dimen/textsize1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corners_frame"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_floagnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/floagnumber"
+            android:textSize="@dimen/textsize1" />
+
+        <EditText
+            android:id="@+id/edt_floagnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textSize="@dimen/textsize1" />
+
+        <Button
+            android:id="@+id/btn_comfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbuttonbg"
+            android:text="@string/scan"
+            android:textSize="@dimen/textsize1" />
+
+        <Button
+            android:id="@+id/btn_write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbuttonbg"
+            android:text="@string/write"
+            android:textSize="@dimen/textsize1" />
+         <Button
+            android:id="@+id/btn_barcode_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbuttonbg"
+            android:text="@string/barcode"
+            android:textSize="@dimen/textsize1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="@string/tag_no_content"
+            android:textSize="@dimen/textsize2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/tag_type_content"
+            android:textSize="@dimen/textsize2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tag_dealwidth_content"
+            android:textSize="@dimen/textsize2" />
+    </LinearLayout>
+
+    <com.ylkj.ems.view.MyListView
+        android:id="@+id/detail_tag_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000" />
+
+</LinearLayout>

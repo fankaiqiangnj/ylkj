@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shapee"
+        android:gravity="center"
+        android:text="@string/taskfinish"
+        android:textSize="@dimen/textsize1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corners_frame"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/baseinfor"
+        android:paddingLeft="@dimen/baseinfor"
+        android:paddingRight="@dimen/baseinfor" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/finishstatus"
+                android:textSize="@dimen/textsize2" />
+
+            <EditText
+                android:id="@+id/finishstatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/textsize2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remarks"
+                android:layout_marginLeft="@dimen/margLeftwosize"
+                android:textSize="@dimen/textsize2" />
+
+            <EditText
+                android:id="@+id/remarks"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize2" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/baseinfor"
+            android:text="@string/ok"
+            android:background="@drawable/toolbuttonbg"
+            android:textSize="@dimen/textsize2" />
+    </LinearLayout>
+
+</LinearLayout>

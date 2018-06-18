@@ -4,6 +4,12 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:orientation="vertical">
+    <TextView
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="设置"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <LinearLayout
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
@@ -52,6 +58,7 @@
             android:textSize="13sp"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:orientation="horizontal">
@@ -61,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:background="@drawable/bule_bg"
+            android:background="@drawable/teal_bg"
             android:gravity="center"
             android:text="取消"
             android:textColor="@color/cmbkb_white"

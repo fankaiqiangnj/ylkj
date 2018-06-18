@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/toplinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/logolayout" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toplinearlayout"
+        android:layout_toRightOf="@+id/scrollview" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toplinearlayout" >
+
+        <RadioGroup
+            android:id="@+id/tabs_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/tab_rb_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mytaskbg"
+                android:button="@null"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/tab_rb_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/newbg"
+                android:button="@null" />
+              <RadioButton
+                android:id="@+id/tab_rb_H"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/floagbg"
+                android:button="@null" />
+            <RadioButton
+                android:id="@+id/tab_rb_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/differentbg"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/tab_rb_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stoackbg"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/tab_rb_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reportbg"
+                android:button="@null" />
+             <RadioButton
+                android:id="@+id/tab_rb_i"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/checkequit"
+                android:gravity="center"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/tab_rb_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/datacenter"
+                android:gravity="center"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/tab_rb_j"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/managecenter"
+                android:gravity="center"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/tab_rb_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/subsidiarytoolbg"
+                android:button="@null" />
+        </RadioGroup>
+    </ScrollView>
+
+</RelativeLayout>

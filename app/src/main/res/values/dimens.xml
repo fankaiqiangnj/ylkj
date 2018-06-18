@@ -1,3 +1,55 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="baseinfor">15dp</dimen>
+    <!-- 任务详情中的详细信息距离左边的距离 -->
+    <dimen name="baserepairtask">15dp</dimen>
+    <!-- 任务详情中的任务基本信息距离左边的距离 -->
+    <dimen name="setbtnmargleft">30dp</dimen>
+    <!-- 设置界面中按钮直接的距离 -->
+    <dimen name="setbtnlayoutmargleft">20dp</dimen>
+    <!-- 设置界面端口和ip的距离 -->
+    <dimen name="setedtportlength">100dp</dimen>
+    <!-- 设置界面-端口输入框 -->
+    <dimen name="setedtiplength">200dp</dimen>
+    <!-- 设置界面-ip输入框 -->
+    <dimen name="textsize1">30dp</dimen>
+    <!-- 系统字体大小 1号 -->
+    <dimen name="textsize2">25dp</dimen>
+    <!-- 系统字体大小 2号 -->
+    <dimen name="textsize3">18dp</dimen>
+    <!-- 系统字体大小 3号 -->
+    <dimen name="margLefonesize">25dp</dimen>
+    <!-- 相差一个字 -->
+    <dimen name="margLeftwosize">50dp</dimen>
+    <!-- 相差二个字 -->
+    <dimen name="margLefthreesize">75dp</dimen>
+    <!-- 相差三个字 -->
+    <dimen name="margLeffoursize">80dp</dimen>
+    <!-- 相差四个字 -->
+    <dimen name="loginmainpading">20dp</dimen>
+    <!-- 登陆界面填充周边的距离 -->
+    <dimen name="buttonpadingleft">10dp</dimen>
+    <!-- 登录界面登录按钮左填充 -->
+    <dimen name="buttonpadingright">10dp</dimen>
+    <!-- 登录界面登录按钮右填充 -->
+    <dimen name="padleft">5dp</dimen>
+    <!-- button左右填充 -->
+    <dimen name="filepadleft">5dp</dimen>
+    <!-- button左右间隔 -->
+    <dimen name="margin_left_right">12dip</dimen>
+    <!-- button宽度 -->
+    <dimen name="button_width">150dip</dimen>
+    <!-- 离线导入pop间隔 -->
+    <dimen name="radiogroupheight">40dip</dimen>
+    <dimen name="SyncHorizontalScrollViewheight">40dip</dimen>
+    <dimen name="tasklistmargin">10dp</dimen>
+    <!-- 任务列表填充 -->
+    <dimen name="tasklistpad">3dp</dimen>
+    <!-- 任务列表填充 -->
+    <dimen name="aotocheckbutton">10dp</dimen>
+    <!-- 自动盘点节目距离top -->
+    <dimen name="dialoglistbutton">20dp</dimen>
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
 </resources>

@@ -1,18 +1,14 @@
 package com.ylkj.ems.main;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.ylkj.ems.R;
-import com.ylkj.ems.base.BaseMvpActivity;
+import com.ylkj.ems.base.activity.BaseMvpActivity;
 import com.ylkj.ems.util.EditDialog;
-import com.ylkj.ems.util.UrlUtil;
 
 import butterknife.BindView;
 
@@ -26,10 +22,34 @@ public class MainActivity extends BaseMvpActivity<MainContract.IMainPresenter> i
         return new MainPresenterImpl();
     }
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void getBundleExtras(Bundle extras) {
+
+    }
+
+    @Override
+    protected int getContentViewLayoutID() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
+    }
+
+    @Override
+    protected boolean isCustomPendingTransition() {
+        return false;
+    }
+
+    @Override
+    protected TransitionMode getCustomPendingTransitionType() {
+        return null;
+    }
+
+    @Override
+    protected void initViewsAndEvents() {
         setSupportActionBar(toolbar);
         presenter.requestTestContent();
     }
@@ -59,6 +79,5 @@ public class MainActivity extends BaseMvpActivity<MainContract.IMainPresenter> i
     @Override
     public void setTestContent(String str) {
         tVmain.setText(str);
-
     }
 }

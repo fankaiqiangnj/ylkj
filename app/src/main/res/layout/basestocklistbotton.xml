@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shapee"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/stocknamebotton"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/textsize1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbuttonbg"
+                android:paddingLeft="@dimen/padleft"
+                android:paddingRight="@dimen/padleft"
+                android:text="@string/scan" />
+            <Button
+                android:id="@+id/barcode_sacn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbuttonbg"
+                android:paddingLeft="@dimen/padleft"
+                android:paddingRight="@dimen/padleft"
+                android:text="@string/barcode" />
+
+            <Button
+                android:id="@+id/adddifferent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbuttonbg"
+                android:paddingLeft="@dimen/padleft"
+                android:paddingRight="@dimen/padleft"
+                android:text="@string/adddiferents" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corners_frame"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/diferentsproject"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/scancontent"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize2" />
+        </LinearLayout>
+
+        <com.ylkj.ems.view.MyListView
+            android:id="@+id/stockinfolistbotton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corners_frame"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbuttonbg"
+            android:paddingLeft="@dimen/padleft"
+            android:paddingRight="@dimen/padleft"
+            android:text="@string/ok" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbuttonbg"
+            android:paddingLeft="@dimen/padleft"
+            android:paddingRight="@dimen/padleft"
+            android:text="@string/cancel0" />
+    </LinearLayout>
+
+</LinearLayout>

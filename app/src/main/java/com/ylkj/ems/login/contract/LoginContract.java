@@ -1,7 +1,7 @@
 package com.ylkj.ems.login.contract;
 
-import com.ylkj.ems.base.MvpPresenter;
-import com.ylkj.ems.base.MvpView;
+import com.ylkj.ems.base.mvp.MvpPresenter;
+import com.ylkj.ems.base.mvp.MvpView;
 
 public class LoginContract {
     public interface ILoginView extends MvpView {
