@@ -26,7 +26,7 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
     @BindView(R.id.tabs_rg)
     RadioGroup mRadioGroup;
 
-    FragmentManager fragmentManager ;
+    FragmentManager fragmentManager;
     Fragment fragment;
 
 
@@ -71,7 +71,7 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
         mRadioGroup.setOnCheckedChangeListener(this);
     }
 
-    @OnClick({R.id.loginout,R.id.home})
+    @OnClick({R.id.loginout, R.id.home})
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.loginout:
@@ -110,124 +110,118 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
         switch (i) {
             case R.id.tab_rb_e:
                 //我的任务
-                fragment = getNowFragment(R.id.tab_content);
+                fragment = fragmentManager.findFragmentById(R.id.tab_content);
                 if (fragment instanceof MyTaskFragment) {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(0);
-                }else {
+                } else {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
-                    if (myTaskFragment==null) {
+                    if (myTaskFragment == null) {
                         Bundle bundle = new Bundle();
                         bundle.putInt("taskType", 0);
-                        myTaskFragment= MyTaskFragment.newInstance(bundle);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
-                    }else {
+                        changeFragment(R.id.tab_content, MyTaskFragment.newInstance(bundle), "tag_mytask");
+                    } else {
                         myTaskFragment.changTaskType(0);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
+                        changeFragment(R.id.tab_content, myTaskFragment, "tag_mytask");
                     }
                 }
 
                 break;
             case R.id.tab_rb_a:
                 //资产标贴
-                fragment = getNowFragment(R.id.tab_content);
+                fragment = fragmentManager.findFragmentById(R.id.tab_content);
                 if (fragment instanceof MyTaskFragment) {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(1);
-                }else {
+                } else {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
-                    if (myTaskFragment==null) {
+                    if (myTaskFragment == null) {
                         Bundle bundle = new Bundle();
                         bundle.putInt("taskType", 1);
-                        myTaskFragment= MyTaskFragment.newInstance(bundle);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
-                    }else {
+                        changeFragment(R.id.tab_content, MyTaskFragment.newInstance(bundle), "tag_mytask");
+                    } else {
                         myTaskFragment.changTaskType(1);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
+                        changeFragment(R.id.tab_content, myTaskFragment, "tag_mytask");
                     }
                 }
                 break;
             case R.id.tab_rb_H:
                 //标签更换
-                fragment = getNowFragment(R.id.tab_content);
+                fragment = fragmentManager.findFragmentById(R.id.tab_content);
                 if (fragment instanceof MyTaskFragment) {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(2);
-                }else {
+                } else {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
-                    if (myTaskFragment==null) {
+                    if (myTaskFragment == null) {
                         Bundle bundle = new Bundle();
                         bundle.putInt("taskType", 2);
-                        myTaskFragment= MyTaskFragment.newInstance(bundle);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
-                    }else {
+                        changeFragment(R.id.tab_content,  MyTaskFragment.newInstance(bundle), "tag_mytask");
+                    } else {
                         myTaskFragment.changTaskType(2);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
+                        changeFragment(R.id.tab_content, myTaskFragment, "tag_mytask");
                     }
                 }
                 break;
             case R.id.tab_rb_b:
                 //资产异动
-                fragment = getNowFragment(R.id.tab_content);
+                fragment = fragmentManager.findFragmentById(R.id.tab_content);
                 if (fragment instanceof MyTaskFragment) {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(3);
-                }else {
+                } else {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
-                    if (myTaskFragment==null) {
+                    if (myTaskFragment == null) {
                         Bundle bundle = new Bundle();
                         bundle.putInt("taskType", 3);
-                        myTaskFragment= MyTaskFragment.newInstance(bundle);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
-                    }else {
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
+                        changeFragment(R.id.tab_content, MyTaskFragment.newInstance(bundle), "tag_mytask");
+                    } else {
+                        changeFragment(R.id.tab_content, myTaskFragment, "tag_mytask");
                     }
                 }
                 break;
             case R.id.tab_rb_d:
                 //资产盘点
-                fragment = getNowFragment(R.id.tab_content);
+                fragment = fragmentManager.findFragmentById(R.id.tab_content);
                 if (fragment instanceof MyTaskFragment) {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(4);
-                }else {
+                } else {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
-                    if (myTaskFragment==null) {
+                    if (myTaskFragment == null) {
                         Bundle bundle = new Bundle();
                         bundle.putInt("taskType", 4);
-                        myTaskFragment= MyTaskFragment.newInstance(bundle);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
-                    }else {
+                        changeFragment(R.id.tab_content, MyTaskFragment.newInstance(bundle), "tag_mytask");
+                    } else {
                         myTaskFragment.changTaskType(4);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
+                        changeFragment(R.id.tab_content, myTaskFragment, "tag_mytask");
                     }
                 }
                 break;
             case R.id.tab_rb_c:
                 //资产报废
-                fragment = getNowFragment(R.id.tab_content);
+                fragment = fragmentManager.findFragmentById(R.id.tab_content);
                 if (fragment instanceof MyTaskFragment) {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(5);
-                }else {
+                } else {
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
-                    if (myTaskFragment==null) {
+                    if (myTaskFragment == null) {
                         Bundle bundle = new Bundle();
                         bundle.putInt("taskType", 5);
-                        myTaskFragment= MyTaskFragment.newInstance(bundle);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
-                    }else {
+                        changeFragment(R.id.tab_content, MyTaskFragment.newInstance(bundle), "tag_mytask");
+                    } else {
                         myTaskFragment.changTaskType(5);
-                        changeFragment(R.id.tab_content,myTaskFragment , "tag_mytask");
+                        changeFragment(R.id.tab_content, myTaskFragment, "tag_mytask");
                     }
                 }
                 break;
             case R.id.tab_rb_i:
                 //设备查询
-                if (fragmentManager.findFragmentByTag("tag_device")!=null){
-                    changeFragment(R.id.tab_content,null,"tag_device");
-                }else {
-                    changeFragment(R.id.tab_content,DeviceFragment.newInstance(null),"tag_device");
+                if (fragmentManager.findFragmentByTag("tag_device") != null) {
+                    changeFragment(R.id.tab_content, fragmentManager.findFragmentByTag("tag_device"), "tag_device");
+                } else {
+                    changeFragment(R.id.tab_content, DeviceFragment.newInstance(null), "tag_device");
                 }
 
                 break;
@@ -237,10 +231,10 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                 break;
             case R.id.tab_rb_j:
                 //管理中心
-                if (fragmentManager.findFragmentByTag("tag_set")!=null){
-                    changeFragment(R.id.tab_content,null,"tag_set");
-                }else {
-                    changeFragment(R.id.tab_content, SetFragment.newInstance(null),"tag_set");
+                if (fragmentManager.findFragmentByTag("tag_set") != null) {
+                    changeFragment(R.id.tab_content, fragmentManager.findFragmentByTag("tag_set"), "tag_set");
+                } else {
+                    changeFragment(R.id.tab_content, SetFragment.newInstance(null), "tag_set");
                 }
 
                 break;
@@ -253,9 +247,5 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
         }
     }
 
-    public Fragment getNowFragment(int resId) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment nowFragment = fragmentManager.findFragmentById(resId);
-        return nowFragment;
-    }
+
 }

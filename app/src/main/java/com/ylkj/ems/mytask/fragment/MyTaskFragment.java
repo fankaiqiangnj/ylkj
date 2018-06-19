@@ -58,10 +58,10 @@ public class MyTaskFragment extends BaseMvpFragment<MyTasContract.ITaskPresenter
         if (getArguments() != null) {
             taskType = getArguments().getInt("taskType");
         }
-        list.add("0");
         mTaskRecycler.setLayoutManager(new LinearLayoutManager(mContext));
         taskAdapter = new MyTaskAdapter(mContext, R.layout.item_mytask, list,this);
         mTaskRecycler.setAdapter(taskAdapter);
+        changTaskType(taskType);
     }
 
     @Override

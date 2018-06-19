@@ -346,18 +346,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected void changeFragment(int resId, Fragment fragment, String tag) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment fromFragment = fragmentManager.findFragmentById(resId);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        if (fragment==null){
-            fragment = fragmentManager.findFragmentByTag(tag);
-        }
-        if (null == fromFragment) {
-            transaction.add(resId, fragment, tag);
-        } else if (fragment.isAdded()) {
-            transaction.hide(fromFragment).show(fragment).commit();
-        } else {
-            transaction.hide(fromFragment).add(resId, fragment, tag).commit();
-        }
+        transaction.replace(resId,fragment,tag).commit();
     }
 
     /**
