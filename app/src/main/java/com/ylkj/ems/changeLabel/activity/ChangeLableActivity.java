@@ -1,16 +1,16 @@
-package com.ylkj.ems.property.activity;
+package com.ylkj.ems.changeLabel.activity;
 
 import android.os.Bundle;
 
 import com.ylkj.ems.R;
 import com.ylkj.ems.base.activity.BaseMvpActivity;
-import com.ylkj.ems.property.contract.UnusualPropertyContract;
-import com.ylkj.ems.property.presenter.UnusualPropertyPresenter;
+import com.ylkj.ems.changeLabel.contract.ChangeLableContract;
+import com.ylkj.ems.changeLabel.presenter.ChangeLablePresenter;
 
-public class UnusualPropertyActivity extends BaseMvpActivity<UnusualPropertyContract.IUnusualPropertyPresenter> implements UnusualPropertyContract.IUnusualPropertyView{
+public class ChangeLableActivity extends BaseMvpActivity<ChangeLableContract.IChangeLablePresenter> implements ChangeLableContract.IChangeLableView{
     @Override
-    protected UnusualPropertyContract.IUnusualPropertyPresenter createPresenter() {
-        return new UnusualPropertyPresenter();
+    protected ChangeLableContract.IChangeLablePresenter createPresenter() {
+        return new ChangeLablePresenter();
     }
 
     @Override
@@ -20,7 +20,7 @@ public class UnusualPropertyActivity extends BaseMvpActivity<UnusualPropertyCont
 
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.activity_unusualproperty;
+        return R.layout.activity_change_label;
     }
 
     @Override

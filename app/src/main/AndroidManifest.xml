@@ -55,6 +55,10 @@
         <activity
             android:name=".label.activity.LabelActivity"
             android:screenOrientation="landscape" />
+        <!--标签更换-->
+        <activity
+            android:name=".changeLabel.activity.ChangeLableActivity"
+            android:screenOrientation="landscape" />
         <!--资产盘点-->
         <activity
             android:name=".property.activity.CheckPropertyActivity"

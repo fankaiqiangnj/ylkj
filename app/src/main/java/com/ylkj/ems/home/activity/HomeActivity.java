@@ -15,6 +15,7 @@ import com.ylkj.ems.home.contract.HomeContract;
 import com.ylkj.ems.home.presenter.HomePresenter;
 import com.ylkj.ems.login.activity.LoginActivity;
 import com.ylkj.ems.mytask.fragment.MyTaskFragment;
+import com.ylkj.ems.set.SetFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -24,6 +25,9 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
 
     @BindView(R.id.tabs_rg)
     RadioGroup mRadioGroup;
+
+    FragmentManager fragmentManager ;
+    Fragment fragment;
 
 
     @Override
@@ -61,6 +65,7 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
         ActivityCollections.getInstance().clearToTop();
         Bundle bundle = new Bundle();
         bundle.putInt("taskType", 0);
+        fragmentManager = getSupportFragmentManager();
         MyTaskFragment taskFragment = MyTaskFragment.newInstance(bundle);
         addFragment(R.id.tab_content, taskFragment, "tag_mytask");
         mRadioGroup.setOnCheckedChangeListener(this);
@@ -102,7 +107,6 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
-        Fragment fragment;
         switch (i) {
             case R.id.tab_rb_e:
                 //我的任务
@@ -111,7 +115,6 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(0);
                 }else {
-                    FragmentManager fragmentManager = getSupportFragmentManager();
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
                     if (myTaskFragment==null) {
                         Bundle bundle = new Bundle();
@@ -132,7 +135,6 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(1);
                 }else {
-                    FragmentManager fragmentManager = getSupportFragmentManager();
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
                     if (myTaskFragment==null) {
                         Bundle bundle = new Bundle();
@@ -152,7 +154,6 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(2);
                 }else {
-                    FragmentManager fragmentManager = getSupportFragmentManager();
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
                     if (myTaskFragment==null) {
                         Bundle bundle = new Bundle();
@@ -172,7 +173,6 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(3);
                 }else {
-                    FragmentManager fragmentManager = getSupportFragmentManager();
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
                     if (myTaskFragment==null) {
                         Bundle bundle = new Bundle();
@@ -191,7 +191,6 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(4);
                 }else {
-                    FragmentManager fragmentManager = getSupportFragmentManager();
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
                     if (myTaskFragment==null) {
                         Bundle bundle = new Bundle();
@@ -211,7 +210,6 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragment;
                     myTaskFragment.changTaskType(5);
                 }else {
-                    FragmentManager fragmentManager = getSupportFragmentManager();
                     MyTaskFragment myTaskFragment = (MyTaskFragment) fragmentManager.findFragmentByTag("tag_mytask");
                     if (myTaskFragment==null) {
                         Bundle bundle = new Bundle();
@@ -226,7 +224,6 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                 break;
             case R.id.tab_rb_i:
                 //设备查询
-                FragmentManager fragmentManager = getSupportFragmentManager();
                 if (fragmentManager.findFragmentByTag("tag_device")!=null){
                     changeFragment(R.id.tab_content,null,"tag_device");
                 }else {
@@ -240,7 +237,12 @@ public class HomeActivity extends BaseMvpActivity<HomeContract.IHomePresenter> i
                 break;
             case R.id.tab_rb_j:
                 //管理中心
-                showProgesDialog(this);
+                if (fragmentManager.findFragmentByTag("tag_set")!=null){
+                    changeFragment(R.id.tab_content,null,"tag_set");
+                }else {
+                    changeFragment(R.id.tab_content, SetFragment.newInstance(null),"tag_set");
+                }
+
                 break;
             case R.id.tab_rb_g:
                 //辅助工具

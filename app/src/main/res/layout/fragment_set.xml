@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/cmbkb_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_gravity="center"
+        android:text="@string/tool_clear_data"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/toolbuttonbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_gravity="center"
+        android:text="@string/unlogin_regist"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/toolbuttonbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_gravity="center"
+        android:text="@string/management_setdata"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/toolbuttonbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

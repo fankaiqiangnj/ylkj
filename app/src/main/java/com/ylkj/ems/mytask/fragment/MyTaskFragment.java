@@ -8,6 +8,7 @@ import android.widget.RadioGroup;
 
 import com.ylkj.ems.R;
 import com.ylkj.ems.base.fragment.BaseMvpFragment;
+import com.ylkj.ems.changeLabel.activity.ChangeLableActivity;
 import com.ylkj.ems.device.activity.DeviceActivity;
 import com.ylkj.ems.differencetask.activity.DifferencetaskActivity;
 import com.ylkj.ems.label.activity.LabelActivity;
@@ -110,7 +111,7 @@ public class MyTaskFragment extends BaseMvpFragment<MyTasContract.ITaskPresenter
 
                 break;
             case 2:
-
+                go(ChangeLableActivity.class);
                 break;
             case 3:
                 go(DifferencetaskActivity.class);
